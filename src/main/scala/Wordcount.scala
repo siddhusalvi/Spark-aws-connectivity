@@ -10,7 +10,7 @@ object Wordcount {
     val bucket = "sparkweek6"
     val file = "words.csv"
 
-	//added environment variable
+	//added environment variable and other data
     val key = System.getenv("key")
     val secretkey = System.getenv("secretkey")
 
