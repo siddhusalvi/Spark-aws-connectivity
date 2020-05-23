@@ -7,11 +7,12 @@ object Wordcount {
     val conf = new SparkConf().setAppName("s3wordcounter").setMaster("local")
     val sc = new SparkContext(conf)
 
-    val bucket = args(0)
-    val file = args(1)
+    val bucket = "sparkweek6"
+    val file = "words.csv"
 
-    val key =
-    val secretkey =
+	//added environment variable
+    val key = System.getenv("key")
+    val secretkey = System.getenv("secretkey")
 
     System.setProperty("com.amazonaws.services.s3.enableV4", "true")
     sc.hadoopConfiguration.set("fs.s3a.access.key", key)
